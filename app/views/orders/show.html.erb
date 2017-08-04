@@ -2,7 +2,42 @@
 
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
+    <h4>for: <%= @order.email %></h4>
   </header>
+
+  <div class="panel panel-default products">
+    <table class="table table-bordered">
+      <thead>
+      </thead>
+      <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td>
+            <%= image_tag product.image.tiny %>
+          </td>
+          <td>
+            <h4><%= product.name %></h4>
+            <br>
+            <p><%= truncate product.description %></p>
+          </td>
+          <td>
+            <%= product.price %>
+          </td>
+          <td>
+             x <%= @line_items.find_by(:product_id => product.id).quantity %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4">
+            TOTAL: <%= @order.total_cents %>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
