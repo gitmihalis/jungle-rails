@@ -1,8 +1,21 @@
 <li class="list-group-item">
-  <div class="panel-heading">  
-    <%= review.rating %> by <strong><%= review.user_id%></strong>
+
+  <div class="panel-heading">
+
+    <span class="rating">
+      <% review.rating.times do %>
+        <%= fa_icon "star" %>
+      <% end %>
+    </span><br/>
+    by 
+    <strong>
+      <%= review.user.name %>
+    </strong>
+
   </div>
+
   <div class="panel-body">
     <%= review.description %>
   </div>
+
 </li>
