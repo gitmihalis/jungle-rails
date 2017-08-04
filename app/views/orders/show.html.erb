@@ -10,23 +10,8 @@
       <thead>
       </thead>
       <tbody>
-      <% @products.each do |product| %>
-        <tr>
-          <td>
-            <%= image_tag product.image.tiny %>
-          </td>
-          <td>
-            <h4><%= product.name %></h4>
-            <br>
-            <p><%= truncate product.description %></p>
-          </td>
-          <td>
-            <%= product.price %>
-          </td>
-          <td>
-             x <%= @line_items.find_by(:product_id => product.id).quantity %>
-          </td>
-        </tr>
+      <% @order.products.each do |product| %>
+        <%= render 'item', product: product %>
       <% end %>
       </tbody>
       <tfoot>

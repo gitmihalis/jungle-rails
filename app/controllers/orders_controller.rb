@@ -2,11 +2,6 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
-    @products = @order.products
-    # TODO ask about eager loading and whether this applies here?
-    # and best way to collect line items
-    @line_items = @order.line_items
-    # byebug
   end
 
   def create
