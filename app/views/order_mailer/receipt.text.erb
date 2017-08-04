@@ -1,4 +1,4 @@
-Your order with the id# <%= order.id %> was confirmed!
+Your order with the id# <%= @order.id %> was confirmed!
 ===============================================
 <% @order.products.each do |product| %>
 - <%= product.name %> x <%= @order.line_items.find_by(:product => product).quantity %>
