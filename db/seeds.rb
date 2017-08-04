@@ -132,5 +132,44 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## USERS
+
+user1 = User.create!({
+  name: 'Salty McBadVibes', 
+  email: 'Iam2sexee@angelfire.com',
+  password: 'foobar'
+})
+
+user2 = User.create!({
+  name: 'Testo Appo', 
+  email: 'test@test.com',
+  password: 'foobar'  
+})
+
+user3 = User.create!({
+  name: 'Unknown Soldier', 
+  email: 'user@example.com',
+  password: 'foobar'  
+})
+
+## REVIEWS
+
+user1.reviews.create!({
+  product_id: 11,
+  description: 'Maximum likeage brah!. This product was gnarlier than the surf in Oahu.',
+  rating: 5
+})
+
+user2.reviews.create!({
+  product_id: 2,
+  description: 'Meh, I\'ve had better...',
+  rating: 3
+})
+
+user2.reviews.create!({
+  product_id: 11,
+  description: 'Worst product ever! BTW I have ridiculously high standards.',
+  rating: 1
+})
 
 puts "DONE!"

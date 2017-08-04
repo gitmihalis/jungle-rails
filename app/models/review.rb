@@ -8,5 +8,11 @@ class Review < ActiveRecord::Base
   validates :product_id, numericality: { only_integer: true }
   validates :user_id, numericality: { only_integer: true }
 
-
 end
+
+    # t.integer  "product_id"
+    # t.integer  "user_id"
+    # t.string   "description"
+    # t.integer  "rating"
+    # t.datetime "created_at",  null: false
+    # t.datetime "updated_at",  null: false
