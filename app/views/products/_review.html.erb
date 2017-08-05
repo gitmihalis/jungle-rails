@@ -18,4 +18,8 @@
     <%= review.description %>
   </div>
 
+  <% if review.user_id == session[:user_id] %>
+    <a class="btn btn-danger">Delete</a>
+  <% end %>
+
 </li>
