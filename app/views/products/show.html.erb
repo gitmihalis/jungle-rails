@@ -26,6 +26,17 @@
       </div>
     </div>
 
+    <div class="row">
+      <div class="col-sm-12">
+        <h4>Leave a review</h4>
+        <%= form_for [@product, @review ] do |f| %>
+          <%= f.number_field :rating %>
+          <%= f.text_area :description, size: "60x12" %>
+          <%= f.submit "Submit" %>
+        <% end %>
+      </div>
+    </div>
+
     <% if @product.reviews.size > 0 %>
     <div class="row">
       <div class="col-sm-12 reviews">
