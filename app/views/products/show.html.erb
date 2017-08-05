@@ -52,7 +52,10 @@
       <div class="col-sm-12 reviews">
           <h4>Reviews</h4>
         <ul class="list-group">
-          <% @product.reviews.includes(:user).each do |review| %>
+          <%# Pass the product_reviews from the  controller rather than 
+          using @product.reviews.includes(:user).each do |review| in the
+          view. The latter neglect the assosciation already made in the model! %>
+          <% @product_reviews.each do |review| %>
             <%= render 'review', { review: review } %>
           <% end %>
         </ul>
