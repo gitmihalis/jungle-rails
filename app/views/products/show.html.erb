@@ -31,7 +31,6 @@
         <h4>Leave a review</h4>
 
         <%= form_for [@product, @review ] do |f| %>
-
           <div class="form-group">
             <%= f.label :rating %>
             <%= f.select :rating, options_for_select([1,2,3,4,5]) %>
@@ -44,6 +43,7 @@
 
           <%= f.submit "Submit", class: "btn btn-default" %>
         <% end %>
+        
       </div>
     </div>
 
