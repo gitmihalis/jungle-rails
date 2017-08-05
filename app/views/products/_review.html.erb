@@ -19,7 +19,9 @@
   </div>
 
   <% if review.user_id == session[:user_id] %>
-    <a class="btn btn-danger">Delete</a>
+    <%= form_for [@product, review], method: "DELETE" do |f|  %>
+      <%= f.submit 'Delete', class: "btn btn-danger" %>
+    <% end %>
   <% end %>
 
 </li>
