@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_filter :current_user
+  before_filter :authorize
 
   def create
     @review = current_user.reviews.new(review_params)
