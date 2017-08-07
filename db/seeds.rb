@@ -147,7 +147,7 @@ user2 = User.create!({
 })
 
 user3 = User.create!({
-  name: 'Unknown Soldier', 
+  name: 'Bilky Tuffmuffin', 
   email: 'user@example.com',
   password: 'foobar'  
 })
