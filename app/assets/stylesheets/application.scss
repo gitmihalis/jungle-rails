@@ -2,11 +2,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Roboto');
 // App
 @import "products";
+@import "navbar";
 
 // Global
 body {
   padding-top: 70px;
+  font-family: 'Roboto';
+
+  h1, h2, h3, h4, h5, h6 {
+   font-family: 'Archivo Black';
+ }
+
 }
+
+
+

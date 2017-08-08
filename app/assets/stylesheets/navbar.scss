@@ -1,0 +1,19 @@
+nav {
+  box-shadow: 0 0 10px #aaa;
+
+  a.navbar-brand {
+    color: white !important;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 3px black;
+    font-weight: 800;
+  }
+
+  .btn-goup {
+    .login-actions {
+      a.btn {
+        border-bottom: 2px solid black;
+        color: white;
+      }
+    }
+  }
+}
