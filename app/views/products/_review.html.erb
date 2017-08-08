@@ -1,7 +1,7 @@
 <li class="list-group-item">
 
   <div class="panel-heading">
-
+    <%= review.created_at.to_formatted_s(:short) %><br/>
     <span class="rating">
       <% review.rating.times do %>
         <%= fa_icon "star" %>
@@ -9,7 +9,7 @@
     </span><br/>
     by 
     <strong>
-      <%= review.user.name %>
+      <%= review.user.name %> 
     </strong>
 
   </div>
